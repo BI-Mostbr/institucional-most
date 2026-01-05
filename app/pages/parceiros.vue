@@ -1,0 +1,1 @@
+<template>Parceiros</template>
