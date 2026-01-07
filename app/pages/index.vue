@@ -1,26 +1,25 @@
 <template>
   <section class="w-full">
-    <div>
+    <div class="hidden sm:block">
       <NuxtImg
         alt="Top banner"
         src="/images/top banner desktop.png"
-        class="w-full h-auto rounded"
         width="1260"
         height="505"
+        priority
       />
     </div>
-    <div>
-       <NuxtImg
+    <div class="sm:hidden">
+      <NuxtImg
         alt="Top banner"
-        src="/images/top_banner_desktop.png"
-        class="w-full h-auto rounded"
-        width="1260"
-        height="505"
+        src="/images/banner-mobile.png"
+        width="420"
+        height="962"
       />
     </div>
   </section>
 
-  <section class="mx-10 py-24 relative">
+  <section class="mx-5 sm:mx-10 py-24 relative">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-24">
       <div class="flex flex-col gap-14">
         <div class="flex flex-col gap-5">
@@ -146,91 +145,56 @@
   </section>
 
   <section class="relative">
-    <NuxtImg
-      alt="Quero ser parceiro"
-      src="/images/quero_ser_parceiro.png"
-      class="absolute -top-50 sm:-top-62.5 left-1/2 -translate-x-1/2 w-full max-w-6xl rounded mx-auto z-10"
-      width="1260"
-      height="600"
-    />
+    <div class="hidden sm:block">
+      <NuxtImg
+        alt="Quero ser parceiro"
+        src="/images/quero_ser_parceiro.png"
+        class="absolute -top-10 sm:-top-62.5 left-1/2 -translate-x-1/2 w-full max-w-6xl rounded mx-auto z-10"
+      />
+    </div>
+    <div class="sm:hidden mx-5">
+      <div
+        class="bg-[#2162A4] rounded-2xl h-175 flex flex-col justify-between px-4 pt-4"
+      >
+        <h2 class="text-[40px] text-white leading-10 pt-2 font-medium px-2">
+          A Most também é parceira de imobiliárias e assessorias
+        </h2>
+        <button class="bg-[#FF4B8B] rounded-xl h-14 font-medium text-white">
+          Quero ser um parceiro Most
+        </button>
+        <NuxtImg
+          alt="Quero ser parceiro"
+          src="/images/parceria-imobiliária-mobile.png"
+        />
+      </div>
+    </div>
   </section>
 
-  <section class="pt-40 sm:pt-80">
+  <section class="pt-15 sm:pt-80">
     <div class="flex flex-col gap-8">
-      <h2 class="text-[126px] mx-10">Quer ser um parceiro da Most?</h2>
-      <p class="w-75 lg:self-end">
+      <h2
+        class="sm:text-[126px] text-5xl mx-5 sm:mx-10 font-semibold leading-tight tracking-tight"
+      >
+        Quer ser um parceiro da Most?
+      </h2>
+      <p class="w-75 self-end text-xs">
         Preencha o formulário e faça parte de nosso ecossistema
       </p>
     </div>
   </section>
 
-  <div class="lg:self-end">
+  <div class="self-end">
     <Icon name="custom:arrow" size="54" />
   </div>
 
-  <section
-    class="grid grid-cols-1 sm:grid-cols-2 border-b border-[#EAECF0] mx-auto gap-8"
-  >
-    <NuxtImg
-      alt="Quero ser parceiro"
-      src="/images/formulario_parceiro.png"
-      class=""
-      width="798"
-      height="800"
-    />
-
-    <div
-      class="flex flex-col gap-8 items-center sm:items-start justify-center w-full"
-    >
-      <div class="flex flex-col gap-2 w-full">
-        <label for="nome">Seu nome</label>
-        <input
-          placeholder="Digite..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="flex flex-col gap-2 w-full">
-        <label for="email">Email</label>
-        <input
-          placeholder="Seu melhor e-mail..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="flex flex-col gap-2 w-full">
-        <label for="nome">Telefone/Celular</label>
-        <input
-          placeholder="Digite..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="rounded-xl p-1 w-auto cursor-pointer">
-        <label class="flex items-start cursor-pointer relative gap-x-2">
-          <input
-            type="checkbox"
-            class="sr-only"
-            :checked="optionsSelected"
-            @change="toggleOption"
-          />
-          <div
-            class="w-5 h-5 rounded border border-[#D0D5DD] flex items-center justify-center transition-color"
-            :class="optionsSelected ? 'bg-most-primary border-none' : ''"
-          >
-            <Icon v-if="optionsSelected" name="custom:selected" size="30" />
-          </div>
-          <p>Aceito os Termos e Condições da Most Br</p>
-        </label>
-      </div>
-      <div class="w-full">
-        <button
-          class="w-full h-14 rounded-xl text-xl font-semibold hover:rounded-lg bg-[#FF4B8B] cursor-pointer text-white focus:ring-black focus:ring-offset-2 focus:ring-2"
-        >
-          Enviar
-        </button>
-      </div>
-    </div>
-  </section>
+  <SendEmail></SendEmail>
 </template>
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Como funciona o crédito imobiliário - Most Br',
+  description: 'mostbr.com.br',
+})
+
 const optionsSelected = ref<boolean>(false)
 
 function toggleOption(): boolean {
