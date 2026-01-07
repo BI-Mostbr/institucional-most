@@ -8,8 +8,8 @@
         width="41"
         alt="Most logo"
         src="/images/logo.svg"
-      ></NuxtImg>
-      <nav>
+      />
+      <nav class="hidden sm:block">
         <ul class="flex gap-4">
           <li
             v-for="item in menuItems"
@@ -25,10 +25,13 @@
         </ul>
       </nav>
       <button
-        class="bg-[#FF4B8B] text-white px-4 py-2 rounded-xl h-12.75 w-44 hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2"
+        class="bg-[#FF4B8B] text-white px-4 py-2 rounded-xl h-12.75 w-44 hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 hidden sm:block"
       >
         Simule agora
       </button>
+      <div class="sm:hidden">
+        <Icon name="heroicons:bars-3" size="30" class="cursor-pointer text-black" />
+      </div>
     </div>
   </div>
 </template>

@@ -9,6 +9,15 @@
         height="505"
       />
     </div>
+    <div>
+       <NuxtImg
+        alt="Top banner"
+        src="/images/top_banner_desktop.png"
+        class="w-full h-auto rounded"
+        width="1260"
+        height="505"
+      />
+    </div>
   </section>
 
   <section class="mx-10 py-24 relative">
