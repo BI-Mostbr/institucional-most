@@ -1,9 +1,16 @@
 <template>
   <div
-    class="h-20 mx-auto max-w-315 z-50 backdrop-blur-sm fixed left-0 right-0 bg-white/80 w-full top-0"
+    class="h-20 z-50 backdrop-blur-sm fixed left-0 right-0 bg-white/80 w-full top-0"
   >
-    <div class="flex justify-between items-center h-full mx-10">
-      <Icon name="custom:logo" size="40"></Icon>
+    <div
+      class="flex justify-between items-center h-full mx-auto max-w-315 px-10"
+    >
+      <Icon
+        name="custom:logo"
+        size="40"
+        @click="goTo('/')"
+        class="cursor-pointer"
+      ></Icon>
       <nav class="hidden md:block">
         <ul class="flex gap-4">
           <li
@@ -20,7 +27,8 @@
         </ul>
       </nav>
       <button
-        class="bg-[#FF4B8B] text-white px-4 py-2 rounded-xl h-12.75 w-44 hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 hidden md:block"
+        class="bg-[#FF4B8B] text-white px-4 py-2 rounded-xl h-12.75 w-44 hover:rounded-lg hover:bg-[#fd4183] cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 hidden md:block"
+        @click="goTo('/simulador-coleta-dados')"
       >
         Simule agora
       </button>

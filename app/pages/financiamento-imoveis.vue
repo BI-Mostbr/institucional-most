@@ -5,24 +5,26 @@
         <NuxtImg
           alt="Casal feliz com a Most"
           src="/images/top_banner_soluções_most.png"
-          class="w-full h-auto rounded"
+          class="w-full h-auto rounded cursor-pointer"
           width="1260"
           height="299"
           loading="eager"
           placeholder="none"
           :preload="true"
+          @click="goTo('/simulador-coleta-dados')"
         />
       </div>
       <div class="sm:hidden mx-2">
         <NuxtImg
           alt="Casal feliz com a Most"
           src="/images/top_banner_soluções_most_mobile.png"
-          class="w-full h-auto rounded"
+          class="w-full h-auto rounded cursor-pointer"
           width="420"
           height="781"
           loading="eager"
           placeholder="none"
           :preload="true"
+          @click="goTo('/simulador-coleta-dados')"
         />
       </div>
     </section>
@@ -88,6 +90,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
+            @click="goTo('/simulador-coleta-dados')"
           >
             Simule agora
           </button>
@@ -129,6 +132,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
+            @click="goTo('/simulador-coleta-dados')"
           >
             Adquira agora
           </button>
@@ -170,6 +174,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
+            @click="goTo('/simulador-coleta-dados')"
           >
             Conheça agora
           </button>
@@ -260,4 +265,10 @@ useSeoMeta({
 definePageMeta({
   key: (route) => route.fullPath,
 })
+
+const router = useRouter()
+
+function goTo(path: string) {
+  router.push(path)
+}
 </script>

@@ -171,7 +171,9 @@
           </h2>
         </div>
         <div class="flex flex-col sm:flex-row gap-8 sm:max-w-300 mx-10">
-          <div class="flex flex-col gap-5 w-full">
+          <div
+            class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
+          >
             <NuxtImg
               alt="Casal feliz com a Most"
               src="/images/analise_de_credito.png"
@@ -187,7 +189,9 @@
               risco e com alta confiabilidade.
             </p>
           </div>
-          <div class="flex flex-col gap-5 w-full">
+          <div
+            class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
+          >
             <NuxtImg
               alt="Casal feliz entrando em um comodo vazio"
               src="/images/credito_imobiliario.png"
@@ -204,7 +208,9 @@
               especializados.
             </p>
           </div>
-          <div class="flex flex-col gap-5 w-full">
+          <div
+            class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
+          >
             <NuxtImg
               alt="Casal feliz sentado na sala"
               src="/images/emprestimo_com_garantia_de_imovel.png"

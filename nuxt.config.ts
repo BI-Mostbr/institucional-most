@@ -30,6 +30,9 @@ export default defineNuxtConfig({
       '/images/**': {
         headers: { 'cache-control': 'public,max-age=31536000,immutable' },
       },
+      '/icons/**': {
+        headers: { 'cache-control': 'public,max-age=31536000,immutable' },
+      },
     },
   },
   image: {

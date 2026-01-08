@@ -7,7 +7,9 @@
       loading="eager"
       placeholder="none"
       :preload="true"
+      height="798"
       src="/images/formulario_parceiro.png"
+      priority
     />
 
     <div
