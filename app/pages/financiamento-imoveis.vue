@@ -90,7 +90,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
-            @click="goTo('/simulador-coleta-dados')"
+            @click="contact"
           >
             Simule agora
           </button>
@@ -132,7 +132,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
-            @click="goTo('/simulador-coleta-dados')"
+            @click="contact"
           >
             Adquira agora
           </button>
@@ -174,7 +174,7 @@
           </div>
           <button
             class="p-4 text-white bg-[#FF4B8B] sm:w-1/3 rounded-xl hover:rounded-lg cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 font-semibold"
-            @click="goTo('/simulador-coleta-dados')"
+            @click="contact"
           >
             Conheça agora
           </button>
@@ -270,5 +270,9 @@ const router = useRouter()
 
 function goTo(path: string) {
   router.push(path)
+}
+
+function contact() {
+  window.open('https://wa.me/5511947271029', '_blank')
 }
 </script>

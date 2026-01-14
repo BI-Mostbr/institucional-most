@@ -18,6 +18,7 @@
       <div class="flex flex-col gap-2 w-full">
         <label for="nome">Seu nome</label>
         <input
+          v-model="name"
           placeholder="Digite..."
           class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -25,6 +26,7 @@
       <div class="flex flex-col gap-2 w-full">
         <label for="email">Email</label>
         <input
+          v-model="email"
           placeholder="Seu melhor e-mail..."
           class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -32,6 +34,7 @@
       <div class="flex flex-col gap-2 w-full">
         <label for="phone">Telefone/Celular</label>
         <input
+          v-model="phone"
           placeholder="Digite..."
           class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -56,6 +59,7 @@
       <div class="w-full">
         <button
           class="w-full h-14 rounded-xl text-xl font-semibold hover:rounded-lg bg-[#FF4B8B] cursor-pointer text-white focus:ring-black focus:ring-offset-2 focus:ring-2"
+          @click="contact"
         >
           Enviar
         </button>
@@ -66,8 +70,26 @@
 <script setup lang="ts">
 const optionsSelected = ref<boolean>(false)
 
+const name = ref('')
+const email = ref('')
+const phone = ref('')
+
 function toggleOption(): boolean {
   optionsSelected.value = !optionsSelected.value
   return optionsSelected.value
+}
+
+function contact() {
+  const text = `
+    Olá!
+    Meu nome é ${name.value}
+    Email: ${email.value}
+
+    Contato:
+    ${phone.value}
+  `.trim()
+
+  const url = `https://wa.me/5511947271029?text=${encodeURIComponent(text)}`
+  window.open(url, '_blank')
 }
 </script>

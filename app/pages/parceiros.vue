@@ -31,6 +31,7 @@
       <div class="flex flex-col gap-2">
         <label for="nome">Seu nome</label>
         <input
+          v-model="name"
           placeholder="Digite..."
           class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -38,6 +39,7 @@
       <div class="flex flex-col gap-2">
         <label for="email">Email</label>
         <input
+          v-model="email"
           placeholder="Digite seu melhor e-mail..."
           class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -45,6 +47,7 @@
       <div class="flex flex-col gap-2">
         <label for="phone">Telefone/Celular</label>
         <input
+          v-model="phone"
           placeholder="Digite..."
           class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
         />
@@ -52,6 +55,7 @@
       <div class="flex flex-col justify-end gap-2">
         <button
           class="sm:w-42.5 w-full p-3 rounded-xl text-lg font-medium hover:rounded-lg bg-[#FF4B8B] cursor-pointer text-white focus:ring-black focus:ring-offset-2 focus:ring-2"
+          @click="contact"
         >
           Enviar
         </button>
@@ -243,6 +247,24 @@ useSeoMeta({
   title: 'Parceiro para crédito imobiliário - Most Br',
   description: 'mostbr.com.br',
 })
+
+const name = ref('')
+const email = ref('')
+const phone = ref('')
+
+function contact() {
+  const text = `
+    Olá!
+    Meu nome é ${name.value}
+    Email: ${email.value}
+
+    Contato:
+    ${phone.value}
+  `.trim()
+
+  const url = `https://wa.me/5511947271029?text=${encodeURIComponent(text)}`
+  window.open(url, '_blank')
+}
 </script>
 <style scoped>
 .float-x {

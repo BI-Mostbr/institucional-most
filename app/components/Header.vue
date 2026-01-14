@@ -28,7 +28,7 @@
       </nav>
       <button
         class="bg-[#FF4B8B] text-white px-4 py-2 rounded-xl h-12.75 w-44 hover:rounded-lg hover:bg-[#fd4183] cursor-pointer focus:ring-black focus:ring-offset-2 focus:ring-2 hidden md:block"
-        @click="goTo('/simulador-coleta-dados')"
+        @click="contact"
       >
         Simule agora
       </button>
@@ -86,5 +86,9 @@ function goTo(path) {
 
 function openMenu() {
   open.value = !open.value
+}
+
+function contact() {
+  window.open('https://wa.me/5511947271029', '_blank')
 }
 </script>

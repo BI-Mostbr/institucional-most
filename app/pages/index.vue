@@ -102,7 +102,7 @@
               </p>
               <button
                 class="w-37.5 h-12.5 bg-[#FF4B8B] rounded-xl text-white focus:ring-black focus:ring-offset-2 focus:ring-2 cursor-pointer hover:rounded-lg hover:bg-[#fd4183]"
-                @click="goTo('/simulador-coleta-dados')"
+                @click="contact"
               >
                 Simule agora
               </button>
@@ -226,6 +226,10 @@ const optionsSelected = ref<boolean>(false)
 function toggleOption(): boolean {
   optionsSelected.value = !optionsSelected.value
   return optionsSelected.value
+}
+
+function contact() {
+  window.open('https://wa.me/5511947271029', '_blank')
 }
 
 function goTo(path: string) {

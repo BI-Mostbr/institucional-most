@@ -21,6 +21,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: [
+        'subaverage-elaine-unappetizingly.ngrok-free.dev', // teu host exato
+        '.ngrok-free.dev', // permite qualquer subdomínio ngrok (ideal para dev)
+      ],
+    },
   },
   nitro: {
     routeRules: {
