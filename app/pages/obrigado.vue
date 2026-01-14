@@ -14,13 +14,10 @@
       >
         A Most agradece o seu contato!
       </h2>
-      <NuxtImg
+      <img
         alt="Familia feliz no computador vendo o site da Most"
         src="/images/young.png"
-        priority
         loading="eager"
-        placeholder="none"
-        :preload="true"
       />
     </div>
     <div class="w-full flex flex-col items-center gap-5 pb-10">

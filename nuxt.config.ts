@@ -1,12 +1,16 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   
-  // ✅ SSR ativado para pré-renderização (SSG)
   ssr: true,
+  
+  // ✅ Configuração crucial para S3
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/', // Garante que assets vão para /_nuxt/
+  },
   
   modules: ['@nuxt/image', '@nuxt/icon'],
   
@@ -38,24 +42,18 @@ export default defineNuxtConfig({
   },
   
   nitro: {
-    // ✅ CRUCIAL: Define que vai gerar arquivos estáticos
     preset: 'static',
-
-    // ✅ Pré-renderiza todas as rotas automaticamente
     prerender: {
-      crawlLinks: true, // Descobre rotas automaticamente
-      routes: [
-        '/',
+      crawlLinks: true,
+      routes: [        '/',
         '/fale-conosco',
         '/financiamento-imoveis',
         '/incorporadora',
         '/obrigado',
         '/parceiros',
         '/politica-de-privacidade',
-        '/simulador-coleta-dados',
-      ],
+        '/simulador-coleta-dados',],
     },
-    
     routeRules: {
       '/_nuxt/**': {
         headers: { 'cache-control': 'public,max-age=31536000,immutable' },
@@ -69,7 +67,9 @@ export default defineNuxtConfig({
     },
   },
   
+  // ✅ CRÍTICO: Desabilitar otimização de imagens para modo estático
   image: {
+    provider: 'none', // Desabilita processamento de imagens
     format: ['webp', 'png', 'jpeg'],
   },
   

@@ -2,12 +2,12 @@
   <div class="mx-auto max-w-315 w-full sm:py-18 p-10 border-b border-[#EAECF0]">
     <div class="flex flex-col sm:flex-row justify-between">
       <div class="flex flex-col gap-8">
-        <NuxtImg
+        <img
           width="198"
           height="63"
           alt="Most logo"
           src="/images/Logo_footer.png"
-        ></NuxtImg>
+        />
         <p class="text-[#656565] text-base">
           Most Br. O hub de soluções de crédito.
         </p>
@@ -19,18 +19,18 @@
       </div>
       <div class="flex flex-col gap-2">
         <p class="text-[#656565]">Baixe nosso App</p>
-        <NuxtImg
+        <img
           width="135"
           height="40"
           alt="Most logo"
           src="/images/Mobile_app_store.png"
-        ></NuxtImg>
-        <NuxtImg
+        />
+        <img
           width="135"
           height="40"
           alt="Most logo"
           src="/images/Mobile_app_google.png"
-        ></NuxtImg>
+        />
       </div>
     </div>
   </div>

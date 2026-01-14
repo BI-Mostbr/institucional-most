@@ -2,14 +2,11 @@
   <section
     class="grid grid-cols-1 sm:grid-cols-2 border-b border-[#EAECF0] gap-8"
   >
-    <NuxtImg
+    <img
       alt="Quero ser parceiro"
       loading="eager"
-      placeholder="none"
-      :preload="true"
       height="798"
       src="/images/formulario_parceiro.png"
-      priority
     />
 
     <div
