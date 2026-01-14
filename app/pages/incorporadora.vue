@@ -3,27 +3,23 @@
   <div class="flex flex-col gap-8">
     <section class="z-10">
       <div class="sm:block hidden">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_incorporadoras_desktop.png"
           class="w-full h-auto rounded"
           width="1260"
           height="299"
           loading="eager"
-          placeholder="none"
-          :preload="true"
         />
       </div>
       <div class="sm:hidden mx-2">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_incorporadoras_most_mobile.png"
           class="w-full h-auto rounded"
           width="420"
           height="781"
           loading="eager"
-          placeholder="none"
-          :preload="true"
         />
       </div>
     </section>
@@ -68,15 +64,13 @@
           </p>
         </div>
         <div class="sm:basis-1/2">
-          <NuxtImg
+          <img
             alt="Casal feliz com a Most"
             src="/images/casal_andando.png"
             class="w-full h-auto rounded hover:scale-[105%] transition-all duration-300 ease-in-out"
             width="630"
             height="576"
             loading="eager"
-            placeholder="none"
-            :preload="true"
           />
         </div>
       </div>
@@ -153,12 +147,12 @@
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 sm:mx-auto gap-8">
-        <NuxtImg
+        <img
           alt="Quero ser parceiro"
           src="/images/casal_abraco.png"
           class=""
           height="749"
-        ></NuxtImg>
+        />
         <div
           class="flex flex-col gap-4 sm:gap-7 items-center sm:items-start justify-end mx-10"
         >

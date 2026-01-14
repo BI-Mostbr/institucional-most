@@ -2,28 +2,24 @@
   <div class="flex flex-col gap-8">
     <section class="">
       <div class="sm:block hidden">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_soluções_most.png"
           class="w-full h-auto rounded cursor-pointer"
           width="1260"
           height="299"
           loading="eager"
-          placeholder="none"
-          :preload="true"
           @click="goTo('/simulador-coleta-dados')"
         />
       </div>
       <div class="sm:hidden mx-2">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_soluções_most_mobile.png"
           class="w-full h-auto rounded cursor-pointer"
           width="420"
           height="781"
           loading="eager"
-          placeholder="none"
-          :preload="true"
           @click="goTo('/simulador-coleta-dados')"
         />
       </div>
@@ -96,13 +92,13 @@
           </button>
         </div>
         <div class="basis-1/2 order-1 md:order-2">
-          <NuxtImg
+          <img
             alt="Familia comemorando"
             src="/images/precisa-de-credito.png"
             class="w-full h-50 sm:h-auto object-cover rounded-t-2xl sm:rounded-none"
             width="660"
             height="645"
-          ></NuxtImg>
+          />
         </div>
       </div>
     </section>
@@ -138,13 +134,13 @@
           </button>
         </div>
         <div class="basis-1/2 order-1">
-          <NuxtImg
+          <img
             alt="Familia na sala feliz"
             src="/images/mulher-celular.png"
             class="w-full h-50 sm:h-auto object-cover rounded-t-2xl sm:rounded-l-2xl sm:rounded-t-none"
             width="660"
             height="645"
-          ></NuxtImg>
+          />
         </div>
       </div>
     </section>
@@ -180,13 +176,13 @@
           </button>
         </div>
         <div class="basis-1/2 order-1 md:order-2">
-          <NuxtImg
+          <img
             alt="Familia na sala feliz"
             src="/images/familia-sala.png"
             class="w-full h-50 sm:h-auto object-cover rounded-t-2xl sm:rounded-r-2xl sm:rounded-t-none"
             width="660"
             height="645"
-          ></NuxtImg>
+          />
         </div>
       </div>
     </section>
@@ -245,13 +241,12 @@
           </div>
         </div>
         <div class="basis-1/2">
-          <NuxtImg
+          <img
             alt="Familia na sala feliz"
             src="/images/Most-realiza-sonhos.png"
             class="object-cover"
-            width=""
             height="608"
-          ></NuxtImg>
+          />
         </div>
       </div>
     </section>

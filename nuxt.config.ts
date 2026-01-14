@@ -1,15 +1,25 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  
+  ssr: true,
+  
+  // ✅ Configuração crucial para S3
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/', // Garante que assets vão para /_nuxt/
+  },
+  
   modules: ['@nuxt/image', '@nuxt/icon'],
+  
   experimental: {
     payloadExtraction: false,
     viewTransition: true,
     writeEarlyHints: false,
   },
+  
   icon: {
     customCollections: [
       {
@@ -18,17 +28,32 @@ export default defineNuxtConfig({
       },
     ],
   },
+  
   css: ['~/assets/css/main.css'],
+  
   vite: {
     plugins: [tailwindcss()],
     server: {
       allowedHosts: [
-        'subaverage-elaine-unappetizingly.ngrok-free.dev', // teu host exato
-        '.ngrok-free.dev', // permite qualquer subdomínio ngrok (ideal para dev)
+        'subaverage-elaine-unappetizingly.ngrok-free.dev',
+        '.ngrok-free.dev',
       ],
     },
   },
+  
   nitro: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: [        '/',
+        '/fale-conosco',
+        '/financiamento-imoveis',
+        '/incorporadora',
+        '/obrigado',
+        '/parceiros',
+        '/politica-de-privacidade',
+        '/simulador-coleta-dados',],
+    },
     routeRules: {
       '/_nuxt/**': {
         headers: { 'cache-control': 'public,max-age=31536000,immutable' },
@@ -41,9 +66,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  
+  // ✅ CRÍTICO: Desabilitar otimização de imagens para modo estático
   image: {
+    provider: 'none', // Desabilita processamento de imagens
     format: ['webp', 'png', 'jpeg'],
   },
+  
   routeRules: {
     '/images/**': {
       headers: {

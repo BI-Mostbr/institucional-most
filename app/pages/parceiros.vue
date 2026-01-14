@@ -2,24 +2,20 @@
   <div class="flex flex-col">
     <section class="">
       <div class="sm:block hidden">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_parceiros_most_desktop.png"
           width="1260"
           height="299"
           loading="eager"
-          placeholder="none"
-          :preload="true"
         />
       </div>
       <div class="sm:hidden mx-2">
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_parceiros_most_mobile.png"
           height="781"
           loading="eager"
-          placeholder="none"
-          :preload="true"
           class="w-full"
         />
       </div>
@@ -127,37 +123,31 @@
       </div>
       <div class="flex relative">
         <div class="z-10 absolute right-11 top-40 float-y-r">
-          <NuxtImg
+          <img
             alt="Casal feliz com a Most"
             src="/images/setas.png"
             loading="eager"
             height="173"
-            placeholder="none"
-            :preload="true"
             width="91"
             class="w-14 sm:w-auto h-auto"
-          ></NuxtImg>
+          />
         </div>
-        <NuxtImg
+        <img
           alt="Casal feliz com a Most"
           src="/images/senhor.png"
           loading="eager"
           height="781"
-          placeholder="none"
-          :preload="true"
           class="float-x"
-        ></NuxtImg>
+        />
         <div class="z-10 absolute left-6 bottom-55 float-y-t">
-          <NuxtImg
+          <img
             alt="Casal feliz com a Most"
             src="/images/setas.png"
             loading="eager"
             height="173"
-            placeholder="none"
-            :preload="true"
             width="91"
             class="w-14 sm:w-auto h-auto"
-          ></NuxtImg>
+          />
         </div>
       </div>
     </section>
@@ -178,13 +168,12 @@
           <div
             class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
           >
-            <NuxtImg
+            <img
               alt="Casal feliz com a Most"
               src="/images/analise_de_credito.png"
               loading="eager"
-              placeholder="none"
               class="h-61.25 object-contain"
-            ></NuxtImg>
+            />
             <h4 class="text-[28px] font-medium">Análise de Crédito</h4>
             <p class="text-base text-[#656565]">
               Através da análise de crédito que oferecemos aos nossos parceiros
@@ -196,13 +185,12 @@
           <div
             class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
           >
-            <NuxtImg
+            <img
               alt="Casal feliz entrando em um comodo vazio"
               src="/images/credito_imobiliario.png"
               loading="eager"
-              placeholder="none"
               class="h-61.25 object-contain"
-            ></NuxtImg>
+            />
             <h4 class="text-[28px] font-medium">Crédito Imobiliário</h4>
             <p class="text-base text-[#656565]">
               Através de nosso sistema que unifica os principais fornecedores de
@@ -215,13 +203,12 @@
           <div
             class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
           >
-            <NuxtImg
+            <img
               alt="Casal feliz sentado na sala"
               src="/images/emprestimo_com_garantia_de_imovel.png"
               loading="eager"
-              placeholder="none"
               class="h-61.25 object-contain"
-            ></NuxtImg>
+            />
             <h4 class="text-[28px] font-medium">
               Empréstimo com Garantia de Imóvel
             </h4>

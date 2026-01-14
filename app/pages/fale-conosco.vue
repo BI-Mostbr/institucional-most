@@ -18,7 +18,7 @@
     </section>
   </div>
 </template>
-<script>
+<script setup>
 useSeoMeta({
   title: 'Fale com a Most Br - Most Br',
   description: 'mostbr.com.br',

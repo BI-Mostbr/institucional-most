@@ -1,28 +1,23 @@
 <template>
   <section class="w-full z-10">
     <div class="hidden sm:block">
-      <NuxtImg
+      <img
         alt="Familia feliz no computador vendo o site da Most"
         src="/images/top banner desktop.png"
         width="1260"
         height="505"
-        priority
         loading="eager"
-        placeholder="none"
-        :preload="true"
         @click="goTo('app')"
         class="cursor-pointer"
       />
     </div>
     <div class="sm:hidden">
-      <NuxtImg
+      <img
         alt="Familia feliz no computador vendo o site da Most"
         src="/images/banner-mobile.png"
         width="420"
         height="962"
         loading="eager"
-        placeholder="none"
-        :preload="true"
         @click="goTo('app')"
         class="cursor-pointer"
       />
@@ -165,7 +160,7 @@
 
   <section class="relative">
     <div class="hidden sm:block">
-      <NuxtImg
+      <img
         alt="Quero ser parceiro"
         src="/images/quero_ser_parceiro.png"
         class="absolute -top-10 sm:-top-62.5 left-1/2 -translate-x-1/2 w-full max-w-6xl rounded mx-auto z-10 cursor-pointer hover:scale-[105%] transition-all duration-300 ease-in-out"
@@ -182,7 +177,7 @@
         <button class="bg-[#FF4B8B] rounded-xl h-14 font-medium text-white">
           Quero ser um parceiro Most
         </button>
-        <NuxtImg
+        <img
           alt="Quero ser parceiro"
           src="/images/parceria-imobiliária-mobile.png"
         />
