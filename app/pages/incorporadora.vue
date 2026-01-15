@@ -1,20 +1,17 @@
 <template>
-  <!-- top_banner_incorporadoras_desktop.png -->
   <div class="flex flex-col gap-8">
     <section class="z-10">
-      <div class="sm:block hidden">
+      <div class="sm:block hidden md:mx-0 mx-10">
         <img
-          alt="Casal feliz com a Most"
-          src="/images/top_banner_incorporadoras_desktop.png"
+          alt="Construtor olhando a obra feliz com a Most"
+          src="/images/banner-desktop-incorporadora-Most.png"
           class="w-full h-auto rounded"
-          width="1260"
-          height="299"
           loading="eager"
         />
       </div>
       <div class="sm:hidden mx-2">
         <img
-          alt="Casal feliz com a Most"
+          alt="Construtor olhando a obra feliz com a Most"
           src="/images/top_banner_incorporadoras_most_mobile.png"
           class="w-full h-auto rounded"
           width="420"
@@ -27,7 +24,7 @@
     <section
       class="w-screen ml-[calc(50%-50vw)] bg-[#F8F8F8] pb-10 pt-48 -mt-48 sm:pt-32 sm:-mt-32 relative flex gap-12 flex-col"
     >
-      <div class="max-w-315 mx-auto px-10">
+      <div class="max-w-315 mx-auto px-10 lg:px-0">
         <div class="flex flex-col gap-8">
           <h2 class="text-[#FF4B8B] text-[21px] font-semibold">
             Soluções para Incorporadoras
@@ -47,15 +44,15 @@
         </div>
       </div>
       <div
-        class="max-w-315 mx-auto px-10 flex flex-col sm:flex-row justify-between"
+        class="max-w-315 mx-auto px-10 lg:px-0 flex flex-col sm:flex-row justify-between gap-10 sm:gap-0"
       >
-        <div class="sm:basis-1/3 flex flex-col gap-5 justify-center">
+        <div class="sm:basis-1/3 flex flex-col gap-5 lg:gap-10 justify-center">
           <h3
             class="text-[36px] sm:text-[48px] font-medium leading-tight tracking-tight"
           >
             E como funciona após a entrega do Habite-se?
           </h3>
-          <p class="text-[#656565] font-normal text-base">
+          <p class="text-[#656565] font-normal text-base leading-8">
             Após a entrega do habite-se fazemos uma nova entrevista com todos os
             clientes e conseguimos indicar a cada um deles os bancos com seu
             perfil. Na emissão do contrato de financiamento imobiliário,
@@ -74,7 +71,7 @@
           />
         </div>
       </div>
-      <div class="max-w-315 mx-auto px-10 mt-10">
+      <div class="max-w-315 mx-auto px-10 lg:px-0 mt-10">
         <div class="flex flex-col gap-10">
           <h3 class="text-[36px] sm:text-[48px] font-medium leading-10">
             Quais são as vantagens para a Incorporadora?
@@ -133,7 +130,7 @@
     </section>
 
     <section class="flex flex-col gap-4 sm:gap-10">
-      <div class="mx-10 flex flex-col pt-10">
+      <div class="mx-10 lg:mx-0 flex flex-col pt-10">
         <h2
           class="lg:text-[96px] text-5xl font-semibold leading-tight tracking-tight"
         >
@@ -146,77 +143,27 @@
           <Icon name="custom:arrow" size="54" />
         </div>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:mx-auto gap-8">
-        <img
-          alt="Quero ser parceiro"
-          src="/images/casal_abraco.png"
-          class=""
-          height="749"
-        />
-        <div
-          class="flex flex-col gap-4 sm:gap-7 items-center sm:items-start justify-end mx-10"
-        >
-          <div class="flex flex-col gap-2 w-full">
-            <label for="nome">Seu da construtora</label>
-            <input
-              v-model="nameCompany"
-              placeholder="Digite..."
-              class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-            />
-          </div>
-          <div class="flex flex-col gap-2 w-full">
-            <label for="nome">Seu nome</label>
-            <input
-              v-model="name"
-              placeholder="Digite..."
-              class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-            />
-          </div>
-          <div class="flex flex-col gap-2 w-full">
-            <label for="email">Email</label>
-            <input
-              v-model="email"
-              placeholder="Seu melhor e-mail..."
-              class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-            />
-          </div>
-          <div class="flex flex-col gap-2 w-full">
-            <label for="nome">Telefone/Celular</label>
-            <input
-              v-model="phone"
-              placeholder="Digite..."
-              class="w-full pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-            />
-          </div>
-          <div class="rounded-xl p-1 w-auto cursor-pointer">
-            <label class="flex items-start cursor-pointer relative gap-x-2">
-              <input
-                type="checkbox"
-                class="sr-only"
-                :checked="optionsSelected"
-                @change="toggleOption"
-              />
-              <div
-                class="w-5 h-5 rounded border border-[#D0D5DD] flex items-center justify-center transition-color"
-                :class="optionsSelected ? 'bg-most-primary border-none' : ''"
-              >
-                <Icon v-if="optionsSelected" name="custom:selected" size="30" />
-              </div>
-              <p>Aceito os Termos e Condições da Most Br</p>
-            </label>
-          </div>
-          <div class="w-full">
-            <button
-              class="w-full h-14 rounded-xl text-xl font-semibold hover:rounded-lg bg-[#FF4B8B] cursor-pointer text-white focus:ring-black focus:ring-offset-2 focus:ring-2"
-              @click="contact"
-            >
-              Enviar
-            </button>
-          </div>
-        </div>
-      </div>
 
-      <div class="border-b border-[#EAECF0] mt-10"></div>
+      <div class="pt-12 sm:pt-21.75">
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 border-b border-[#EAECF0] gap-8"
+        >
+          <img
+            alt="Quero ser parceiro"
+            src="/images/casal_abraco.png"
+            class=""
+            height="749"
+          />
+
+          <div
+            class="flex flex-col gap-4 sm:gap-8 items-center sm:items-start justify-center mx-5 sm:mx-0"
+          >
+            <RDStationForm
+              elementId="formulario-incorporadoras-ee41ae4074f12b1b944b"
+            />
+          </div>
+        </section>
+      </div>
     </section>
   </div>
 </template>

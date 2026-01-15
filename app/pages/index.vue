@@ -1,25 +1,25 @@
 <template>
   <section class="w-full z-10">
-    <div class="hidden sm:block">
+    <div class="hidden sm:block relative md:mx-0 mx-10">
       <img
         alt="Familia feliz no computador vendo o site da Most"
-        src="/images/top banner desktop.png"
-        width="1260"
-        height="505"
+        src="/images/Banner-Miracle-desktop-home.png"
         loading="eager"
         @click="goTo('app')"
         class="cursor-pointer"
+        fetchpriority="high"
       />
     </div>
     <div class="sm:hidden">
       <img
         alt="Familia feliz no computador vendo o site da Most"
-        src="/images/banner-mobile.png"
+        src="/images/Banner-Miracle-mobile-home.png"
         width="420"
         height="962"
         loading="eager"
         @click="goTo('app')"
         class="cursor-pointer"
+        fetchpriority="high"
       />
     </div>
   </section>
@@ -28,9 +28,9 @@
     class="w-screen ml-[calc(50%-50vw)] bg-[#F8F8F8] pb-10 pt-48 -mt-48 sm:pt-32 sm:-mt-32"
   >
     <div
-      class="py-24 relative max-w-315 flex flex-col gap-8 items-center sm:mx-auto mx-10"
+      class="py-24 relative max-w-315 flex flex-col gap-8 items-center lg:mx-auto mx-10"
     >
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-24 sm:mx-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-24">
         <div class="flex flex-col gap-14">
           <div class="flex flex-col gap-5">
             <h2 class="text-[#FF4B8B] font-medium text-xl">Sobre a Most</h2>
@@ -97,7 +97,7 @@
               </p>
               <button
                 class="w-37.5 h-12.5 bg-[#FF4B8B] rounded-xl text-white focus:ring-black focus:ring-offset-2 focus:ring-2 cursor-pointer hover:rounded-lg hover:bg-[#fd4183]"
-                @click="contact"
+                @click="goTo('/simulador-coleta-dados')"
               >
                 Simule agora
               </button>
@@ -159,15 +159,15 @@
   </section>
 
   <section class="relative">
-    <div class="hidden sm:block">
+    <div class="hidden sm:block md:mx-0 mx-10">
       <img
         alt="Quero ser parceiro"
         src="/images/quero_ser_parceiro.png"
-        class="absolute -top-10 sm:-top-62.5 left-1/2 -translate-x-1/2 w-full max-w-6xl rounded mx-auto z-10 cursor-pointer hover:scale-[105%] transition-all duration-300 ease-in-out"
+        class="absolute -top-10 sm:-top-62.5 left-1/2 -translate-x-1/2 w-full max-w-315 rounded mx-auto z-10 cursor-pointer hover:scale-[105%] transition-all duration-300 ease-in-out"
         @click="goTo('/parceiros')"
       />
     </div>
-    <div class="sm:hidden mx-5">
+    <div class="sm:hidden md:mx-0 mx-10">
       <div
         class="bg-[#2162A4] rounded-2xl h-175 flex flex-col justify-between px-4 pt-4"
       >
@@ -185,10 +185,10 @@
     </div>
   </section>
 
-  <section class="pt-15 sm:pt-80">
+  <section class="pt-15 sm:pt-80 sm:mt-25">
     <div class="flex flex-col gap-8">
       <h2
-        class="sm:text-[126px] text-5xl mx-5 sm:mx-10 font-semibold leading-tight tracking-tight"
+        class="sm:text-[126px] text-5xl mx-10 font-semibold leading-tight tracking-tight"
       >
         Quer ser um parceiro da Most?
       </h2>
