@@ -1,18 +1,16 @@
 <template>
   <div class="flex flex-col">
     <section class="">
-      <div class="sm:block hidden">
+      <div class="sm:block hidden mx-10 md:mx-0">
         <img
-          alt="Casal feliz com a Most"
+          alt="Aperto de mão parceiros"
           src="/images/top_banner_parceiros_most_desktop.png"
-          width="1260"
-          height="299"
           loading="eager"
         />
       </div>
       <div class="sm:hidden mx-2">
         <img
-          alt="Casal feliz com a Most"
+          alt="Aperto de mão parceiros"
           src="/images/top_banner_parceiros_most_mobile.png"
           height="781"
           loading="eager"
@@ -22,50 +20,56 @@
     </section>
 
     <section
-      class="grid sm:grid-cols-4 grid-cols-1 gap-6 sm:w-full mx-10 mt-21.75"
+      class="px-5 sm:px-8 md:px-10 lg:px-0 flex justify-between gap-4 p-5 flex-col sm:flex-row"
     >
-      <div class="flex flex-col gap-2">
-        <label for="nome">Seu nome</label>
-        <input
-          v-model="name"
-          placeholder="Digite..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="flex flex-col gap-2">
-        <label for="email">Email</label>
-        <input
-          v-model="email"
-          placeholder="Digite seu melhor e-mail..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="flex flex-col gap-2">
-        <label for="phone">Telefone/Celular</label>
-        <input
-          v-model="phone"
-          placeholder="Digite..."
-          class="pl-2 border border-[#D0D5DD] rounded-lg h-12.5 focus:outline-none focus:ring-black focus:ring-offset-2 focus:ring-2"
-        />
-      </div>
-      <div class="flex flex-col justify-end gap-2">
-        <button
-          class="sm:w-42.5 w-full p-3 rounded-xl text-lg font-medium hover:rounded-lg bg-[#FF4B8B] cursor-pointer text-white focus:ring-black focus:ring-offset-2 focus:ring-2"
-          @click="contact"
+      <div
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
+      >
+        <div
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl flex-shrink-0"
         >
-          Enviar
-        </button>
+          <Icon name="custom:phone" size="24" />
+        </div>
+        <p class="font-semibold text-sm sm:text-base">
+          Operação 100% digital e ágil
+        </p>
+      </div>
+      <div
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
+      >
+        <div
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl shrink-0"
+        >
+          <Icon name="custom:check" size="20" />
+        </div>
+        <p class="font-semibold text-sm sm:text-base">
+          Prático e sem burocracia
+        </p>
+      </div>
+      <div
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
+      >
+        <div
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl shrink-0"
+        >
+          <Icon name="custom:phone2" size="24" />
+        </div>
+        <p class="font-semibold text-sm sm:text-base">
+          Equipe de prontidão para te auxiliar
+        </p>
       </div>
     </section>
 
-    <section class="mx-10 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-21.75">
+    <section
+      class="mx-10 lg:mx-0 grid grid-cols-1 sm:grid-cols-2 gap-12 mt-21.75"
+    >
       <div class="flex flex-col gap-12 basis-2/3">
         <div class="flex flex-col gap-5">
           <h2 class="text-[21px] font-semibold text-[#FF4B8B]">
             O parceiro que você precisava
           </h2>
           <h3
-            class="text-[36px] sm:text-[48px] font-medium leading-tight tracking-tight sm:w-195"
+            class="text-[36px] sm:text-[48px] font-medium leading-tight tracking-tight lg:w-195"
           >
             Está buscando um parceiro estratégico para suas operações de crédito
             imobiliário?
@@ -164,7 +168,7 @@
             agilidade
           </h2>
         </div>
-        <div class="flex flex-col sm:flex-row gap-8 sm:max-w-300 mx-10">
+        <div class="flex flex-col sm:flex-row gap-8 sm:max-w-300 mx-10 sm:mx-0">
           <div
             class="flex flex-col gap-5 w-full hover:scale-[105%] transition-all duration-300 ease-in-out"
           >
@@ -224,8 +228,42 @@
       </div>
     </section>
 
-    <div class="pt-12 sm:pt-21.75">
-      <SendEmail></SendEmail>
+    <section class="">
+      <div class="flex flex-col gap-8">
+        <h2
+          class="sm:text-[126px] text-5xl mx-10 font-semibold leading-tight tracking-tight"
+        >
+          Quer ser um parceiro da Most?
+        </h2>
+        <p class="w-75 self-end text-xs">
+          Preencha o formulário e faça parte de nosso ecossistema
+        </p>
+      </div>
+    </section>
+
+    <div class="self-end">
+      <Icon name="custom:arrow" size="54" />
+    </div>
+
+    <div class="pt-12">
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 border-b border-[#EAECF0] gap-8"
+      >
+        <img
+          alt="Quero ser parceiro"
+          loading="eager"
+          height="798"
+          src="/images/formulario_parceiro.png"
+        />
+
+        <div
+          class="flex flex-col gap-4 sm:gap-8 items-center sm:items-start justify-center mx-5 sm:mx-0"
+        >
+          <RDStationForm
+            elementId="formulario-parceiros-35504d9afd83e7643598"
+          ></RDStationForm>
+        </div>
+      </section>
     </div>
   </div>
 </template>

@@ -1,13 +1,11 @@
 <template>
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col gap-8 w-full overflow-x-hidden">
     <section class="">
-      <div class="sm:block hidden">
+      <div class="hidden sm:block md:mx-0 mx-10">
         <img
           alt="Casal feliz com a Most"
-          src="/images/top_banner_soluções_most.png"
+          src="/images/Banner-solucoes-most-mobile.png"
           class="w-full h-auto rounded cursor-pointer"
-          width="1260"
-          height="299"
           loading="eager"
           @click="goTo('/simulador-coleta-dados')"
         />
@@ -16,9 +14,6 @@
         <img
           alt="Casal feliz com a Most"
           src="/images/top_banner_soluções_most_mobile.png"
-          class="w-full h-auto rounded cursor-pointer"
-          width="420"
-          height="781"
           loading="eager"
           @click="goTo('/simulador-coleta-dados')"
         />
@@ -26,41 +21,47 @@
     </section>
 
     <section
-      class="mx-5 sm:mx-10 flex justify-between gap-4 p-5 flex-col sm:flex-row"
+      class="px-10 sm:px-8 md:px-10 lg:px-0 flex justify-between gap-4 p-5 flex-col sm:flex-row"
     >
       <div
-        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out"
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
       >
         <div
-          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl"
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl flex-shrink-0"
         >
           <Icon name="custom:phone" size="24" />
         </div>
-        <p class="font-normal text-">Operação 100% digital e ágil</p>
+        <p class="font-semibold text-sm sm:text-base">
+          Operação 100% digital e ágil
+        </p>
       </div>
       <div
-        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out"
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
       >
         <div
-          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl"
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl flex-shrink-0"
         >
           <Icon name="custom:check" size="20" />
         </div>
-        <p class="font-normal text-">Prático e sem burocracia</p>
+        <p class="font-semibold text-sm sm:text-base">
+          Prático e sem burocracia
+        </p>
       </div>
       <div
-        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out"
+        class="flex gap-5 items-center hover:scale-[105%] transition-all duration-300 ease-in-out flex-1"
       >
         <div
-          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl"
+          class="bg-white flex items-center justify-center w-12 h-12 rounded-xl border border-[#EAECF0] shadow-2xl flex-shrink-0"
         >
           <Icon name="custom:phone2" size="24" />
         </div>
-        <p class="font-normal text-">Equipe de prontidão para te auxiliar</p>
+        <p class="font-semibold text-sm sm:text-base">
+          Equipe de prontidão para te auxiliar
+        </p>
       </div>
     </section>
 
-    <section class="mx-5 sm:mx-10">
+    <section class="px-10 sm:px-8 md:px-10 lg:px-0">
       <div class="flex flex-col sm:flex-row w-full">
         <div
           class="basis-1/2 order-2 md:order-1 sm:p-12 p-5 bg-[#F8F8F8] sm:rounded-l-2xl rounded-b-2xl flex flex-col gap-8 justify-between"
@@ -103,7 +104,7 @@
       </div>
     </section>
 
-    <section class="mx-5 sm:mx-10">
+    <section class="px-10 sm:px-8 md:px-10 lg:px-0">
       <div class="flex flex-col sm:flex-row w-full">
         <div
           class="basis-1/2 order-2 sm:p-12 p-5 bg-[#F8F8F8] sm:rounded-r-2xl rounded-b-2xl flex flex-col gap-8 justify-between"
@@ -145,7 +146,7 @@
       </div>
     </section>
 
-    <section class="mx-5 sm:mx-10">
+    <section class="px-10 sm:px-8 md:px-10 lg:px-0">
       <div class="flex flex-col sm:flex-row w-full">
         <div
           class="basis-1/2 order-2 md:order-1 sm:p-12 p-5 bg-[#F8F8F8] sm:rounded-l-2xl rounded-b-2xl flex flex-col gap-8 justify-between"
@@ -188,7 +189,7 @@
     </section>
 
     <section
-      class="mx-5 sm:mx-10 flex flex-col gap-10 border-b border-[#D0D5DD]"
+      class="px-10 sm:px-8 md:px-10 lg:px-0 flex flex-col gap-10 border-b border-[#D0D5DD]"
     >
       <div class="py-10">
         <h2
@@ -244,7 +245,7 @@
           <img
             alt="Familia na sala feliz"
             src="/images/Most-realiza-sonhos.png"
-            class="object-cover"
+            class="w-full h-auto object-cover"
             height="608"
           />
         </div>
@@ -252,11 +253,13 @@
     </section>
   </div>
 </template>
+
 <script setup lang="ts">
 useSeoMeta({
   title: 'Qual o melhor financiamento imobiliário? - Most Br',
   description: 'mostbr.com.br',
 })
+
 definePageMeta({
   key: (route) => route.fullPath,
 })

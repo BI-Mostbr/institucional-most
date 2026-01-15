@@ -10,7 +10,9 @@
         <p class="text-[#656565] text-base">
           Sempre alguém de prontidão para te atender.
         </p>
-        <FormsContact></FormsContact>
+        <RDStationForm
+          elementId="formulario-simulador-b53a1d730561090d0afd"
+        ></RDStationForm>
       </div>
     </section>
   </div>

@@ -14,7 +14,9 @@
       </div>
     </section>
     <section>
-      <FormsContact hasTitle></FormsContact>
+      <RDStationForm
+        elementId="formulario-fale-conosco-935e395032bd5faeab72"
+      ></RDStationForm>
     </section>
   </div>
 </template>
